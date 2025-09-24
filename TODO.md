@@ -4,12 +4,12 @@ Este arquivo detalha as tarefas necessárias para implementar a ferramenta `crea
 
 ## Fase 1: Estrutura do Projeto e Dependências
 
-- [ ] 1.1. Criar a estrutura de diretórios principal (`src`, `bin`, `templates`).
-- [ ] 1.2. Inicializar um projeto Node.js com `npm init`.
-- [ ] 1.3. Instalar dependências de desenvolvimento (`typescript`, `@types/node`, `tsx`).
-- [ ] 1.4. Instalar dependências de produção (`commander` para CLI, `inquirer` para prompts, `chalk` para estilo, `handlebars` para templating, `fs-extra` para operações de arquivo).
-- [ ] 1.5. Configurar `tsconfig.json` para o projeto.
-- [ ] 1.6. Criar o script executável em `bin/create-mcp-server.js`.
+- [x] 1.1. Criar a estrutura de diretórios principal (`src`, `bin`, `templates`).
+- [x] 1.2. Inicializar um projeto Node.js com `npm init`.
+- [x] 1.3. Instalar dependências de desenvolvimento (`typescript`, `@types/node`, `tsx`).
+- [x] 1.4. Instalar dependências de produção (`commander` para CLI, `inquirer` para prompts, `chalk` para estilo, `handlebars` para templating, `fs-extra` para operações de arquivo).
+- [x] 1.5. Configurar `tsconfig.json` para o projeto.
+- [x] 1.6. Criar o script executável em `bin/create-mcp-server.js`.
 
 ## Fase 2: Implementação do CLI
 
@@ -39,8 +39,8 @@ Este arquivo detalha as tarefas necessárias para implementar a ferramenta `crea
 
 ## Fase 5: Validações e Tratamento de Erros
 
-- [ ] 5.1. Implementar a validação de nome do projeto em `src/cli/validators.ts`.
-- [ ] 5.2. Implementar a validação de diretório de destino (verificar se existe e não está vazio).
+- [x] 5.1. Implementar a validação de nome do projeto em `src/cli/validators.ts`.
+- [x] 5.2. Implementar a validação de diretório de destino (verificar se existe e não está vazio).
 - [ ] 5.3. Adicionar tratamento de erros para falhas na criação de arquivos ou instalação.
 - [ ] 5.4. Implementar a lógica de confirmação antes de gerar o projeto.
 
@@ -53,7 +53,7 @@ Este arquivo detalha as tarefas necessárias para implementar a ferramenta `crea
 
 ## Fase 7: Testes e Refinamento
 
-- [ ] 7.1. Escrever testes unitários para as funções de validação.
+- [x] 7.1. Escrever testes unitários para as funções de validação.
 - [ ] 7.2. Escrever testes de integração para o fluxo de criação do projeto.
 - [ ] 7.3. Refinar a saída do console e as mensagens do usuário.
 - [ ] 7.4. Testar em diferentes sistemas operacionais (Windows, macOS, Linux).
