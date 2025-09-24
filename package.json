@@ -1,10 +1,15 @@
 {
-  "name": "app",
+  "name": "create-mcp-server",
   "version": "1.0.0",
   "description": "Ferramenta para criação rápida de MCP Server",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "bin": {
+    "create-mcp-server": "bin/create-mcp-server.js"
+  },
   "scripts": {
     "dev": "tsx src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js",
     "test": "vitest"
   },
   "repository": {
@@ -20,6 +25,7 @@
   },
   "homepage": "https://github.com/viniciuscsouza/create-mcp-server#readme",
   "devDependencies": {
+    "@types/fs-extra": "^11.0.4",
     "@types/node": "^24.5.2",
     "tsx": "^4.20.5",
     "typescript": "^5.9.2",
