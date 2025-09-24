@@ -5,7 +5,7 @@ import chalk from 'chalk';
 import { isNodeVersionValid, isValidProjectName } from './cli/validators.js';
 import { displayBanner, promptUser, ProjectOptions } from './cli/ui.js';
 // A função de geração será usada em uma fase futura, mas já a importamos.
-// import { generateProject } from './generator.js';
+import { generateProject } from './generator.js';
 
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const packageJson = require('../package.json');
@@ -73,7 +73,7 @@ async function main() {
       console.log(projectOptions);
 
       // TODO: Chamar a função de geração do projeto aqui.
-      // await generateProject(projectOptions as ProjectOptions);
+      await generateProject(projectOptions as ProjectOptions);
 
       console.log(chalk.bold.green('\nProjeto pronto para ser gerado!'));
     });

@@ -3,6 +3,8 @@ import path from 'path';
 import handlebars from 'handlebars';
 import { exec } from 'child_process';
 import { promisify } from 'util';
+import chalk from 'chalk';
+import inquirer from 'inquirer';
 
 const execAsync = promisify(exec);
 
@@ -72,8 +74,7 @@ export async function generateProject(options: ProjectOptions) {
     installDeps,
   } = options;
   const targetDir = path.join(process.cwd(), projectName);
-  const chalk = (await import('chalk')).default;
-  const inquirer = (await import('inquirer')).default;
+
 
   console.log(`Generating project in ${targetDir}...`);
 
