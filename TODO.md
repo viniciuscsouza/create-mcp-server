@@ -13,11 +13,11 @@ Este arquivo detalha as tarefas necessárias para implementar a ferramenta `crea
 
 ## Fase 2: Implementação do CLI
 
-- [ ] 2.1. Implementar a interface CLI principal em `src/cli/index.ts`.
-- [ ] 2.2. Usar `commander` para definir as flags de linha de comando (`--name`, `--transport`, etc.).
-- [ ] 2.3. Implementar o fluxo interativo com `inquirer` em `src/cli/prompts.ts`.
-- [ ] 2.4. Adicionar um banner de boas-vindas usando `chalk`.
-- [ ] 2.5. Implementar as validações de ambiente (versão do Node.js, etc.) em `src/cli/validators.ts`.
+- [x] 2.1. Implementar a interface CLI principal em `src/cli/index.ts`.
+- [x] 2.2. Usar `commander` para definir as flags de linha de comando (`--name`, `--transport`, etc.).
+- [x] 2.3. Implementar o fluxo interativo com `inquirer` em `src/cli/prompts.ts`.
+- [x] 2.4. Adicionar um banner de boas-vindas usando `chalk`.
+- [x] 2.5. Implementar as validações de ambiente (versão do Node.js, etc.) em `src/cli/validators.ts`.
 
 ## Fase 3: Sistema de Templates
 
