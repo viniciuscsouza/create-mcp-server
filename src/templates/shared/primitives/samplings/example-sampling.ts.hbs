@@ -1,0 +1,18 @@
+export const exampleSampling = {
+  name: "example-sampling",
+  metadata: {
+    description: "An example sampling configuration.",
+    modelPreferences: {
+      temperature: 0.8,
+      maxTokens: 2048
+    }
+  },
+  handler: async (request: any) => ({
+    model: request.modelPreferences?.hints?.preferredModel || "claude-3-opus-20240229",
+    stopReason: "endTurn",
+    usage: {
+      inputTokens: 10, // Dummy value
+      outputTokens: 50 // Dummy value
+    }
+  })
+};

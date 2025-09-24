@@ -1,0 +1,21 @@
+export const exampleTool = {
+  name: "example-tool",
+  metadata: {
+    description: "An example tool that returns a reversed string.",
+    inputSchema: {
+      type: "object",
+      properties: {
+        input: {
+          type: "string",
+          description: "The string to reverse."
+        }
+      },
+      required: ["input"]
+    }
+  },
+  handler: async (args: { input: string }) => {
+    return {
+      content: `Reversed string: ${args.input.split('').reverse().join('')}`
+    };
+  }
+};
