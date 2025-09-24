@@ -21,39 +21,39 @@ Este arquivo detalha as tarefas necessárias para implementar a ferramenta `crea
 
 ## Fase 3: Sistema de Templates
 
-- [ ] 3.1. Criar a estrutura de templates em `src/templates/`.
-- [ ] 3.2. Desenvolver o template `base` com a estrutura compartilhada (`primitives`, `server.ts.hbs`).
-- [ ] 3.3. Criar o `template.json` para o template `base`.
-- [ ] 3.4. Desenvolver o template `stdio` com seu `index.ts.hbs` específico.
-- [ ] 3.5. Desenvolver o template `http` com seu `index.ts.hbs` específico.
-- [ ] 3.6. Implementar a lógica de manipulação de placeholders com `handlebars` em `src/cli/generator.ts`.
+- [x] 3.1. Criar a estrutura de templates em `src/templates/`.
+- [x] 3.2. Desenvolver o template `base` com a estrutura compartilhada (`primitives`, `server.ts.hbs`).
+- [x] 3.3. Criar o `template.json` para o template `base`.
+- [x] 3.4. Desenvolver o template `stdio` com seu `index.ts.hbs` específico.
+- [x] 3.5. Desenvolver o template `http` com seu `index.ts.hbs` específico.
+- [x] 3.6. Implementar a lógica de manipulação de placeholders com `handlebars` em `src/cli/generator.ts`.
 
 ## Fase 4: Lógica de Geração do Projeto
 
-- [ ] 4.1. Implementar a função principal de geração em `src/cli/generator.ts`.
-- [ ] 4.2. Adicionar lógica para copiar os arquivos do template para o diretório de destino.
-- [ ] 4.3. Implementar o processamento dos arquivos `.hbs`, substituindo os placeholders.
-- [ ] 4.4. Implementar a lógica para renomear os arquivos `.hbs` para `.ts` ou outros.
-- [ ] 4.5. Adicionar a funcionalidade para inicializar um repositório Git.
-- [ ] 4.6. Adicionar a funcionalidade para instalar as dependências (`npm install`).
+- [x] 4.1. Implementar a função principal de geração em `src/cli/generator.ts`.
+- [x] 4.2. Adicionar lógica para copiar os arquivos do template para o diretório de destino.
+- [x] 4.3. Implementar o processamento dos arquivos `.hbs`, substituindo os placeholders.
+- [x] 4.4. Implementar a lógica para renomear os arquivos `.hbs` para `.ts` ou outros.
+- [x] 4.5. Adicionar a funcionalidade para inicializar um repositório Git.
+- [x] 4.6. Adicionar a funcionalidade para instalar as dependências (`npm install`).
 
 ## Fase 5: Validações e Tratamento de Erros
 
 - [x] 5.1. Implementar a validação de nome do projeto em `src/cli/validators.ts`.
 - [x] 5.2. Implementar a validação de diretório de destino (verificar se existe e não está vazio).
-- [ ] 5.3. Adicionar tratamento de erros para falhas na criação de arquivos ou instalação.
-- [ ] 5.4. Implementar a lógica de confirmação antes de gerar o projeto.
+- [x] 5.3. Adicionar tratamento de erros para falhas na criação de arquivos ou instalação.
+- [x] 5.4. Implementar a lógica de confirmação antes de gerar o projeto.
 
 ## Fase 6: Funcionalidades Adicionais
 
-- [ ] 6.1. Implementar o suporte para templates customizados (`--template-path`, `--template-url`).
-- [ ] 6.2. Adicionar a configuração de testes automatizados (copiar estrutura de testes).
-- [ ] 6.3. Implementar a exibição da mensagem de "próximos passos" ao final da criação.
-- [ ] 6.4. Criar a documentação `README.md` para a ferramenta `create-mcp-server`.
+- [x] 6.1. Implementar o suporte para templates customizados (`--template-path`, `--template-url`).
+- [x] 6.2. Adicionar a configuração de testes automatizados (copiar estrutura de testes).
+- [x] 6.3. Implementar a exibição da mensagem de "próximos passos" ao final da criação.
+- [x] 6.4. Criar a documentação `README.md` para a ferramenta `create-mcp-server`.
 
 ## Fase 7: Testes e Refinamento
 
 - [x] 7.1. Escrever testes unitários para as funções de validação.
-- [ ] 7.2. Escrever testes de integração para o fluxo de criação do projeto.
-- [ ] 7.3. Refinar a saída do console e as mensagens do usuário.
-- [ ] 7.4. Testar em diferentes sistemas operacionais (Windows, macOS, Linux).
+- [x] 7.2. Escrever testes de integração para o fluxo de criação do projeto.
+- [x] 7.3. Refinar a saída do console e as mensagens do usuário.
+- [x] 7.4. Testar em diferentes sistemas operacionais (Windows, macOS, Linux).
