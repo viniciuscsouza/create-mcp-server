@@ -1,0 +1,12 @@
+import { MCPServer } from '../src/server';
+import { MCP } from '../src/primitives/mcp';
+import { {{transportPascalCase}}Transport } from '../src/primitives/{{transportLowerCase}}';
+
+describe('MCPServer', () => {
+  it('should start without errors', () => {
+    const transport = new {{transportPascalCase}}Transport();
+    const mcp = new MCP(transport);
+    const server = new MCPServer(mcp);
+    expect(() => server.start()).not.toThrow();
+  });
+});

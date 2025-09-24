@@ -1,0 +1,11 @@
+import { MCP } from './primitives/mcp';
+import { MCPServer } from './primitives/server';
+import { {{transportPascalCase}}Transport } from './primitives/{{transportLowerCase}}';
+
+const transport = new {{transportPascalCase}}Transport();
+const mcp = new MCP(transport);
+const server = new MCPServer(mcp);
+
+server.start();
+
+console.log('{{name}} is running with {{transport}} transport');
