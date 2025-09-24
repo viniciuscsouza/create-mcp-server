@@ -1,5 +1,6 @@
 import fs from 'fs-extra';
 import path from 'path';
+import semver from 'semver';
 
 /**
  * Valida se o nome do projeto é válido.
@@ -12,8 +13,8 @@ export function isValidProjectName(name: string): boolean {
   }
   // Regex para validar nomes de pacotes npm, que é uma boa proxy para nomes de projeto.
   // Permite letras minúsculas, números, hífens, pontos e underscores.
-  // Não pode começar com ponto ou underscore.
-  const npmPackageNameRegex = /^(?![_.])(?!.*[\\/!*?"<>|])[a-z0-9-~._]+$/;
+  // Não pode começar com ponto, underscore ou hífen.
+  const npmPackageNameRegex = /^(?![_.-])(?!.*[\\/!*?"<>|])[a-z0-9-~._]+$/;
   return npmPackageNameRegex.test(name);
 }
 
@@ -39,4 +40,13 @@ export async function isDirectoryValid(targetDir: string): Promise<boolean> {
     // Outros erros são inesperados.
     throw error;
   }
+}
+
+/**
+ * Valida se a versão do Node.js atende ao requisito mínimo.
+ * O requisito é >=18.0.0.
+ */
+export function isNodeVersionValid(): boolean {
+  const requiredVersion = '>=18.0.0';
+  return semver.satisfies(process.version, requiredVersion);
 }
