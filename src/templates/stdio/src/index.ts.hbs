@@ -1,0 +1,24 @@
+#!/usr/bin/env node
+
+import { server } from './server.js';
+import { StdioServerTransport } from '@modelcontextprotocol/sdk/server/stdio.js';
+
+async function main() {
+  const transport = new StdioServerTransport();
+  await server.connect(transport);
+
+  // Log to stderr for debugging (stdout is reserved for MCP communication)
+  console.error(`{{projectName}} MCP server running with STDIO transport`);
+}
+
+// Handle graceful shutdown
+process.on('SIGINT', async () => {
+  console.error('Shutting down server...');
+  await server.close();
+  process.exit(0);
+});
+
+main().catch((error) => {
+  console.error('Failed to start server:', error);
+  process.exit(1);
+});

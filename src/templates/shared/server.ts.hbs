@@ -1,0 +1,51 @@
+import { Server } from '@modelcontextprotocol/sdk/server/index.js';
+import { tools } from './primitives/tools/index.js';
+import { resources } from './primitives/resources/index.js';
+import { prompts } from './primitives/prompts/index.js';
+import { samplings } from './primitives/samplings/index.js';
+
+export const server = new Server(
+  {
+    name: "{{projectName}}",
+    version: "1.0.0",
+    description: "{{projectDescription}}"
+  },
+  {
+    capabilities: {
+      {{#if hasTools}}tools: {},{{/if}}
+      {{#if hasResources}}resources: {},{{/if}}
+      {{#if hasPrompts}}prompts: {},{{/if}}
+      {{#if hasSamplings}}sampling: {}{{/if}}
+    },
+  }
+);
+
+// Auto-register all primitives
+{{#if hasTools}}
+tools.forEach(tool => {
+  server.registerTool(tool.name, tool.metadata, tool.handler);
+});
+{{/if}}
+
+{{#if hasResources}}
+resources.forEach(resource => {
+  server.registerResource(
+    resource.name,
+    resource.uri,
+    resource.metadata,
+    resource.handler
+  );
+});
+{{/if}}
+
+{{#if hasPrompts}}
+prompts.forEach(prompt => {
+  server.registerPrompt(prompt.name, prompt.metadata, prompt.handler);
+});
+{{/if}}
+
+{{#if hasSamplings}}
+samplings.forEach(sampling => {
+  server.registerSamplingHandler(sampling.name, sampling.handler);
+});
+{{/if}}

@@ -1,0 +1,30 @@
+#!/usr/bin/env node
+
+import { server } from './server.js';
+import { SSEServerTransport } from '@modelcontextprotocol/sdk/server/sse.js';
+
+const PORT = process.env.PORT ? parseInt(process.env.PORT) : 3000;
+
+async function main() {
+  const transport = new SSEServerTransport('/message', server);
+
+  // Start HTTP server
+  const httpServer = transport.listen(PORT);
+
+  console.log(`{{projectName}} MCP server running on port ${PORT}`);
+  console.log(`Health check: http://localhost:${PORT}/health`);
+
+  return httpServer;
+}
+
+// Handle graceful shutdown
+process.on('SIGINT', async () => {
+  console.log('Shutting down server...');
+  await server.close();
+  process.exit(0);
+});
+
+main().catch((error) => {
+  console.error('Failed to start server:', error);
+  process.exit(1);
+});

@@ -1,0 +1,24 @@
+export const examplePrompt = {
+  name: "example-prompt",
+  metadata: {
+    description: "An example prompt that generates a discussion topic.",
+    arguments: [
+      {
+        name: "topic",
+        description: "The topic to start a discussion on.",
+        required: true
+      }
+    ]
+  },
+  handler: async (args: { topic: string }) => ({
+    messages: [
+      {
+        role: "user",
+        content: {
+          type: "text",
+          text: `Let's have a thoughtful discussion about: ${args.topic}`
+        }
+      }
+    ]
+  })
+};

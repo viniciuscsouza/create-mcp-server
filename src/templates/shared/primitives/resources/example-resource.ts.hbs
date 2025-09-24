@@ -1,0 +1,15 @@
+export const exampleResource = {
+  name: "example-resource",
+  uri: "resource://example",
+  metadata: {
+    title: "Example Resource",
+    description: "An example resource that provides static data.",
+    mimeType: "text/plain"
+  },
+  handler: async (uri: URL) => ({
+    contents: [{
+      uri: uri.href,
+      text: "This is the content of the example resource."
+    }]
+  })
+};

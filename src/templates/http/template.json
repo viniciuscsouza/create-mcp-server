@@ -1,0 +1,36 @@
+{
+  "name": "MCP Server - HTTP",
+  "description": "Servidor MCP com transporte HTTP para integração com APIs REST",
+  "transport": "http",
+  "category": "transport",
+  "compatibility": {
+    "node": ">=18.0.0",
+    "mcp-sdk": "^1.0.0"
+  },
+  "features": [
+    "typescript",
+    "declarative-primitives",
+    "hot-reload",
+    "testing-setup",
+    "sse"
+  ],
+  "placeholders": {
+    "projectName": "Nome do projeto",
+    "projectDescription": "Descrição do projeto",
+    "authorName": "Nome do autor",
+    "authorEmail": "Email do autor"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0",
+    "@types/node": "^20.0.0",
+    "tsx": "^4.0.0"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx watch src/index.ts",
+    "start": "node dist/index.js"
+  }
+}
